@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "Composite"
+		},
+		{
+			"path": "Brigde"
 		}
 	],
 	"settings": {}
