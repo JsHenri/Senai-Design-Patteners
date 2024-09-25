@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "Brigde"
+		},
+		{
+			"path": "Singleton"
+		},
+		{
+			"path": "Observer"
 		}
 	],
 	"settings": {}
