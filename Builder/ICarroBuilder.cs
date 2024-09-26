@@ -1,5 +1,7 @@
 public interface ICarroBuilder
 {
+
+    void IniciarConstrucao();
     void DefinirModelo();
     void DefinirMotor();
     void DefinirAssentos();

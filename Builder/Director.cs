@@ -1,29 +1,40 @@
 public class Director
 {
-    private ICarroBuilder _builder;
+    private readonly Dictionary<string, ICarroBuilder> _builders = new Dictionary<string, ICarroBuilder>();
+    private ICarroBuilder builder;
 
-    public Director(ICarroBuilder builder)
+
+    public void ConstruirCarro(string tipo, TipoPortas portas, params string[] opcionais)
     {
-        _builder = builder;
+        try{
+            
+            this.builder = _builders[tipo];
+            this.builder.IniciarConstrucao();
+            this.builder.DefinirModelo();
+            this.builder.DefinirMotor();
+            this.builder.DefinirAssentos();
+            this.builder.DefinirArCondicionado();
+            this.builder.DefinirComputadorDeBordo();
+            this.builder.DefinirPortas(portas);
+
+            foreach (var op in opcionais)
+            {
+                this.builder.AdicionarOpcional(op);
+            }
+        }
+        catch(KeyNotFoundException e)
+        {
+            Console.WriteLine("Não sei construir esse tipo");
+        }
+
     }
 
-    public void ConstruirCarro(TipoPortas portas, params string[] opcionais)
-    {
-        _builder.DefinirModelo();
-        _builder.DefinirMotor();
-        _builder.DefinirAssentos();
-        _builder.DefinirArCondicionado();
-        _builder.DefinirComputadorDeBordo();
-        _builder.DefinirPortas(portas);
-
-        foreach (var op in opcionais)
-        {
-            _builder.AdicionarOpcional(op);
-        }
+    public void AddBuilder(string name, ICarroBuilder builder){
+        this._builders[name]=builder;
     }
 
     public Carro ObterCarro()
     {
-        return _builder.ObterCarro();
+        return this.builder.ObterCarro();
     }
 }

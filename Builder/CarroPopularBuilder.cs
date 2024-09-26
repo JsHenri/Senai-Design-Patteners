@@ -1,6 +1,10 @@
 public class CarroPopularBuilder : ICarroBuilder
 {
-    private Carro _carro = new Carro();
+    private Carro _carro;
+
+    public void IniciarConstrucao(){
+        _carro = new Carro();
+    }
 
     public void DefinirModelo()
     {

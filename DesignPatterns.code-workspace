@@ -20,6 +20,18 @@
 		},
 		{
 			"path": "Mediator"
+		},
+		{
+			"path": "Chain"
+		},
+		{
+			"path": "Flyweight"
+		},
+		{
+			"path": "Proxy"
+		},
+		{
+			"path": "Builder"
 		}
 	],
 	"settings": {}
