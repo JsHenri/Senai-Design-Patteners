@@ -38,6 +38,9 @@
 		},
 		{
 			"path": "AbstractFactory"
+		},
+		{
+			"path": "Prototype"
 		}
 	],
 	"settings": {}
