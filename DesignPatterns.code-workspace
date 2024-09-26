@@ -44,6 +44,9 @@
 		},
 		{
 			"path": "Memento"
+		},
+		{
+			"path": "TemplateMethod"
 		}
 	],
 	"settings": {}
