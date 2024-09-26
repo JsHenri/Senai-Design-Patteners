@@ -2,6 +2,7 @@
 Carro carro1 = new Carro("Sedan",new Motor(2000));
 carro1.ExibirDetalhes(); // Saída: Carro Modelo: Sedan, Motor: Motor 2.0
 Console.WriteLine("************* 1 ************");
+
 // Clonando o carro
 Carro carro2 = (Carro)carro1.Clone();
 carro2.Modelo = "Hatchback"; // Alterando apenas o modelo no clone
