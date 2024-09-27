@@ -65,6 +65,9 @@
 		},
 		{
 			"path": "Iterator"
+		},
+		{
+			"path": "Visitor"
 		}
 	],
 	"settings": {}
