@@ -14,3 +14,6 @@ maquina.DespacharProduto(); // Produto despachado
 
 Console.WriteLine("\nTentando ejetar moeda após despachar:");
 maquina.EjetarMoeda(); // Não pode ejetar moeda após produto ser despachado
+
+
+
