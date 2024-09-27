@@ -50,6 +50,12 @@
 		},
 		{
 			"path": "State"
+		},
+		{
+			"path": "Strategy"
+		},
+		{
+			"path": "Command"
 		}
 	],
 	"settings": {}
