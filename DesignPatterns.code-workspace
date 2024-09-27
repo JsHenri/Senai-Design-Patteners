@@ -47,6 +47,9 @@
 		},
 		{
 			"path": "TemplateMethod"
+		},
+		{
+			"path": "State"
 		}
 	],
 	"settings": {}
