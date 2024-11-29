@@ -4,6 +4,7 @@ class HomeTheaterFacade
     private TV tv;
     private SoundSystem soundSystem;
     private DVDPlayer dvdPlayer;
+    private Subwoover subwoover;
 
     // Construtor
     public HomeTheaterFacade(TV tv, SoundSystem soundSystem, DVDPlayer dvdPlayer)
@@ -13,6 +14,11 @@ class HomeTheaterFacade
         this.dvdPlayer = dvdPlayer;
     }
 
+    public HomeTheaterFacade(Subwoover subwoover)
+    {
+        this.subwoover = subwoover;
+    }
+
     // Método simplificado para assistir a um filme
     public void WatchMovie(string movie)
     {
@@ -20,6 +26,7 @@ class HomeTheaterFacade
         tv.On();
         soundSystem.On();
         soundSystem.SetVolume(20);
+        subwoover.on();
         dvdPlayer.On();
         dvdPlayer.Play(movie);
     }
@@ -31,6 +38,7 @@ class HomeTheaterFacade
         dvdPlayer.Stop();
         dvdPlayer.Off();
         soundSystem.Off();
+        subwoover.stop();
         tv.Off();
     }
 }
